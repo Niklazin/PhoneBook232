@@ -5,9 +5,7 @@ import asg.cliche.ShellFactory;
 
 import java.io.IOException;
 
-/**
- * Created by javacourses on 15.03.2017..
- */
+
 public class main {
     @Command
     public String hello() {

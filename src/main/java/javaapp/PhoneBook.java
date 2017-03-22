@@ -5,9 +5,7 @@ import asg.cliche.Command;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by javacourses on 15.03.2017..
- */
+
 public class PhoneBook {
     private List<Record> recordList = new ArrayList<>();
 
@@ -41,4 +39,19 @@ public class PhoneBook {
 
         }
     }
+
+    @Command
+    public List<Record> find(String str) {
+        str = str.toLowerCase();
+
+        List<Record> result = new ArrayList<>();
+        for (Record r : recordList) {
+            String name = r.getName().toLowerCase();
+            if (name.contains(str)) ;
+            result.add(r);
+        }
+
+        return result;
+    }
 }
+
